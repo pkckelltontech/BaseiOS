@@ -13,6 +13,9 @@
 		73D5AE921D51C0600026911E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D5AE911D51C0600026911E /* Assets.xcassets */; };
 		73D5AE951D51C0600026911E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D5AE931D51C0600026911E /* LaunchScreen.storyboard */; };
 		73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */; };
+		73D5AEA21D51C71A0026911E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA01D51C71A0026911E /* Constants.swift */; };
+		73D5AEA31D51C71A0026911E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA11D51C71A0026911E /* Utility.swift */; };
+		73D5AEA61D51EEAF0026911E /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA41D51EEAF0026911E /* CoreDataModel.xcdatamodeld */; };
 		9EED2BEBB6CF8E5494E8812F /* Pods_BaseiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B9CD93926ACF6383962C94 /* Pods_BaseiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		73D5AE941D51C0600026911E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73D5AE961D51C0600026911E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAWebServiceHandler.swift; sourceTree = "<group>"; };
+		73D5AEA01D51C71A0026911E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		73D5AEA11D51C71A0026911E /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		73D5AEA51D51EEAF0026911E /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		AE1AD61E129C93BD871E2E67 /* Pods-BaseiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseiOS/Pods-BaseiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B9CD93926ACF6383962C94 /* Pods_BaseiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BDD159ADAF9469B1E1F472 /* Pods-BaseiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseiOS/Pods-BaseiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 		73D5AE891D51C0600026911E /* BaseiOS */ = {
 			isa = PBXGroup;
 			children = (
+				73D5AE9F1D51C71A0026911E /* Utilities */,
 				73D5AE9C1D51C1090026911E /* WebServiceCall */,
 				73D5AE8A1D51C0600026911E /* AppDelegate.swift */,
 				73D5AE8C1D51C0600026911E /* ViewController.swift */,
@@ -78,6 +85,7 @@
 				73D5AE911D51C0600026911E /* Assets.xcassets */,
 				73D5AE931D51C0600026911E /* LaunchScreen.storyboard */,
 				73D5AE961D51C0600026911E /* Info.plist */,
+				73D5AEA41D51EEAF0026911E /* CoreDataModel.xcdatamodeld */,
 			);
 			path = BaseiOS;
 			sourceTree = "<group>";
@@ -88,6 +96,15 @@
 				73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */,
 			);
 			path = WebServiceCall;
+			sourceTree = "<group>";
+		};
+		73D5AE9F1D51C71A0026911E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				73D5AEA01D51C71A0026911E /* Constants.swift */,
+				73D5AEA11D51C71A0026911E /* Utility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		BF0239C61E6C66884EC082D7 /* Pods */ = {
@@ -221,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D5AEA31D51C71A0026911E /* Utility.swift in Sources */,
 				73D5AE8D1D51C0600026911E /* ViewController.swift in Sources */,
+				73D5AEA61D51EEAF0026911E /* CoreDataModel.xcdatamodeld in Sources */,
 				73D5AE8B1D51C0600026911E /* AppDelegate.swift in Sources */,
 				73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */,
+				73D5AEA21D51C71A0026911E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		73D5AEA41D51EEAF0026911E /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				73D5AEA51D51EEAF0026911E /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 73D5AEA51D51EEAF0026911E /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 73D5AE7F1D51C0600026911E /* Project object */;
 }
