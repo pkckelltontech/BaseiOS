@@ -38,6 +38,7 @@ class GAWebServiceHandler: NSObject {
         }
     }
     
+    /*
     // MARK: Access Token API
     func getAccessToken(params:AnyObject?,successBlock:(result : NSDictionary?) -> Void,failureBlock:(error:NSError)->Void)
     {
@@ -572,41 +573,6 @@ class GAWebServiceHandler: NSObject {
         }
         
     }
-
-    //
-    //    func getCollectionItems(){
-    //
-    //
-    //        let parameters = ["collection_id": "17596",
-    //                          "access_token": self.accessToken! as String
-    //        ]
-    //
-    //        Alamofire.request(.GET, VIEW_COLLECTION_ITEM,parameters: parameters).responseJSON{ response in switch response.result
-    //        {
-    //
-    //        case .Success(let JSON):
-    //
-    //
-    //            print("Success with JSON: \(JSON)")
-    //
-    //            let response = JSON as! NSDictionary
-    //
-    //            let result_PagesInfo: NSMutableArray = response.objectForKey("atpages")! as! NSMutableArray
-    //
-    //            self.arrRes = TrendingAtPagesBL.sharedInstance.parseJsonData(result_PagesInfo)
-    //
-    //            if (self.arrRes.count > 0){
-    //
-    //                // self.tblJSON.reloadData()
-    //            }
-    //
-    //        case .Failure(let error):
-    //
-    //            print("Request failed with error: \(error)")
-    //
-    //            }
-    //        }
-    //    }
     
     
     func getInfoAtPage(){
@@ -647,49 +613,6 @@ class GAWebServiceHandler: NSObject {
     
     
     
-    
-    //    func getCollectionItemByItemId(){
-    //
-    //        // Parameters = id : ItemId is required
-    //
-    //        let parameters = ["id": "8177",
-    //            "access_token": self.accessToken! as String
-    //        ]
-    //
-    //        Alamofire.request(.GET, UPDATE_USER_PROFILE,parameters: parameters).responseJSON{ response in switch response.result
-    //        {
-    //
-    //        case .Success(let JSON):
-    //
-    //            print(response.request)
-    //
-    //
-    //            print("Success with JSON: \(JSON)")
-    //
-    //            let response = JSON as! NSDictionary
-    //
-    //
-    //
-    //            let result_Users: NSMutableArray = response.objectForKey("users")! as! NSMutableArray
-    //
-    //            self.arrRes = UsersBL.sharedInstance.parseJsonData(result_Users)
-    //
-    //            if (self.arrRes.count > 0){
-    //
-    //                self.tblJSON.reloadData()
-    //            }
-    //
-    //        case .Failure(let error):
-    //            print(response.request)
-    //
-    //            print("Request failed with error: \(error)")
-    //
-    //            }
-    //        }
-    //    }
-    
-    
-    
     func postFeedback(){
         
         //  param : subject & comment are required
@@ -719,6 +642,7 @@ class GAWebServiceHandler: NSObject {
             }
         }
     }
+    */
     
     
     
