@@ -18,10 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-SM-o6C">
-                                <rect key="frame" x="106" y="90" width="108" height="30"/>
-                                <state key="normal" title="Call webservice"/>
+                                <rect key="frame" x="78" y="234" width="165" height="30"/>
+                                <state key="normal" title="Call GET webservice"/>
                                 <connections>
-                                    <action selector="btnWebServiceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSQ-y6-RLc"/>
+                                    <action selector="btnGETWebServiceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ztz-FG-EUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ1-sh-wP5">
+                                <rect key="frame" x="85" y="142" width="151" height="30"/>
+                                <state key="normal" title="Call POST webservice"/>
+                                <connections>
+                                    <action selector="btnPostWebServiceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nII-gz-4J5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,6 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="470" y="345"/>
         </scene>
     </scenes>
 </document>

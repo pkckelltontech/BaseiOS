@@ -17,8 +17,10 @@ let BASE_URL = "https://www.hungermafia.com/hm/application/ws/"
 let ACCESS_TOKEN_BASE_URL = BASE_URL+"oauth/token"
 
 
-//USER LOGIN
+
 let GET_NOTIFICATION = BASE_URL+"notification/getUserNotifications";
+var API_LOGIN:String = BASE_URL+"login/index"
+
 
 //USER DEFAULTS KEY
 

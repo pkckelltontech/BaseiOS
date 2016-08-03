@@ -1,16 +1,19 @@
 //
 //  GAWebServiceHandler.swift
-//  GetAt
 //
-//  Created by Dixa Katiyar on 5/27/16.
-//  Copyright © 2016 kelltontech. All rights reserved.
-//
+
+//MARK:- README
+/*
+ // I have created two generic methods for POST AND GET Api call. 
+ // Create individual method for each api call.
+*/
 
 import UIKit
 import Alamofire
 
 class GAWebServiceHandler: NSObject {
-    
+    let headers = ["X-API-KEY": "6d9f729b765aae27f45e5ef9150fa073f8a61b94"]
+
     class var sharedInstance: GAWebServiceHandler {
         struct Static {
             static var onceToken: dispatch_once_t = 0
@@ -24,9 +27,7 @@ class GAWebServiceHandler: NSObject {
     
     // MARK: Common Request
     func PostApiRequest(method: Alamofire.Method, url: String, apiData: [String : AnyObject], completion:(finished: Bool, response: AnyObject?) ->Void) {
-        
-        // let headersValue = ["Content-Type": "application/json"]
-        Alamofire.request(method, url, parameters: apiData).responseJSON{ response in
+        Alamofire.request(method, url, parameters: apiData, encoding: .JSON, headers: headers).responseJSON{ response in
             if let JSON = response.result.value {
                 completion(finished: true, response: JSON)
             } else {
@@ -36,8 +37,7 @@ class GAWebServiceHandler: NSObject {
     }
     
     func getApiRequest(method: Alamofire.Method, url: String, completion:(finished: Bool, response: AnyObject?) ->Void) {
-     
-        Alamofire.request(method, url, parameters: nil).responseJSON{ response in
+        Alamofire.request(method, url, parameters: nil, encoding: .JSON, headers: headers).responseJSON{ response in
             if let JSON = response.result.value {
                 completion(finished: true, response: JSON)
             } else {
@@ -46,25 +46,38 @@ class GAWebServiceHandler: NSObject {
         }
     }
     
-    //MARK:
-    /*
-        Create unique method for each web service call
-    */
-    
     // MARK: Get notification
     func getNotifications(successBlock: (result: NSMutableArray?) -> Void, failureBlock:(error: NSError)->Void)
     {
         Utility.showLoader()
         
         self.getApiRequest(.GET, url: GET_NOTIFICATION) { (finished, response) in
+            Utility.hideLoader()
             if(finished)
             {
-                Utility.hideLoader()
                 let responseDict = response as! NSDictionary
                 print(responseDict)
             }
             else{
-                Utility.hideLoader()
+                let error = response as! NSError
+                failureBlock(error: error)
+            }
+        }
+    }
+    
+    // MARK: Login
+    func postLoginWithParam(params: [String : AnyObject], successBlock: (result: NSMutableArray?) -> Void, failureBlock:(error: NSError)->Void)
+    {
+        Utility.showLoader()
+        
+        self.PostApiRequest(.POST, url: API_LOGIN, apiData: params) { (finished, response) in
+            Utility.hideLoader()
+            if(finished)
+            {
+                let responseDict = response as! NSDictionary
+                print(responseDict)
+            }
+            else{
                 let error = response as! NSError
                 failureBlock(error: error)
             }

@@ -21,8 +21,20 @@ class ViewController: UIViewController {
     }
     
     //MARK: IBActions
+    @IBAction func btnPostWebServiceAction(sender: UIButton) {
+        let param = ["email":"pardeep.chaudhary@kelltontech.com", "password":"pardc@12", "plateForm":"ios", "deviceToken":"abcdef123456"]
+        
+//        let parameters=["user":["username":userNameTextField?.text as! AnyObject,
+//            "password":passwordTextField?.text as! AnyObject]]
+
+        GAWebServiceHandler.sharedInstance.postLoginWithParam(param, successBlock: { (result) in
+            print("success in post")
+            }) { (error) in
+                print("error in post")
+        }
+    }
     
-    @IBAction func btnWebServiceAction(sender: UIButton)
+    @IBAction func btnGETWebServiceAction(sender: UIButton)
     {
         GAWebServiceHandler.sharedInstance.getNotifications({ (result) in
             print("Success: %@",result)
