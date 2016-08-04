@@ -52,16 +52,21 @@ class GAWebServiceHandler: NSObject {
         Utility.showLoader()
         
         self.getApiRequest(.GET, url: GET_NOTIFICATION) { (finished, response) in
-            Utility.hideLoader()
             if(finished)
             {
                 let responseDict = response as! NSDictionary
-                print(responseDict)
+//                print(responseDict)
+                let result_collection : NSMutableArray = responseDict.objectForKey("notifications") as! NSMutableArray
+                //Array contains model object
+                let responseArray : NSMutableArray = HomeBusinessLayer.sharedInstance.parseJsonData(result_collection)
+                successBlock(result: responseArray)
             }
             else{
                 let error = response as! NSError
                 failureBlock(error: error)
             }
+            
+            Utility.hideLoader()
         }
     }
     
@@ -71,7 +76,6 @@ class GAWebServiceHandler: NSObject {
         Utility.showLoader()
         
         self.PostApiRequest(.POST, url: API_LOGIN, apiData: params) { (finished, response) in
-            Utility.hideLoader()
             if(finished)
             {
                 let responseDict = response as! NSDictionary
@@ -81,6 +85,8 @@ class GAWebServiceHandler: NSObject {
                 let error = response as! NSError
                 failureBlock(error: error)
             }
+            
+            Utility.hideLoader()
         }
     }
     

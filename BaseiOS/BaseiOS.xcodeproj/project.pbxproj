@@ -13,6 +13,8 @@
 		738518E91D533D31004A359C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738518E61D533D31004A359C /* Main.storyboard */; };
 		738518ED1D533D49004A359C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738518EB1D533D49004A359C /* Assets.xcassets */; };
 		738518EE1D533D49004A359C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 738518EC1D533D49004A359C /* Info.plist */; };
+		738518F01D533DC9004A359C /* HomeBusinessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */; };
+		738518F41D533F0F004A359C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518F31D533F0F004A359C /* Home.swift */; };
 		73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */; };
 		73D5AEA21D51C71A0026911E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA01D51C71A0026911E /* Constants.swift */; };
 		73D5AEA31D51C71A0026911E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA11D51C71A0026911E /* Utility.swift */; };
@@ -27,6 +29,8 @@
 		738518E71D533D31004A359C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		738518EB1D533D49004A359C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		738518EC1D533D49004A359C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusinessLayer.swift; sourceTree = "<group>"; };
+		738518F31D533F0F004A359C /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		73D5AE871D51C0600026911E /* BaseiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAWebServiceHandler.swift; sourceTree = "<group>"; };
 		73D5AEA01D51C71A0026911E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		738518DB1D533CD6004A359C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -96,12 +101,13 @@
 			path = "App Delegate";
 			sourceTree = "<group>";
 		};
-		738518E31D533D31004A359C /* Storyboard : Xib */ = {
+		738518E31D533D31004A359C /* Storyboard/Xib */ = {
 			isa = PBXGroup;
 			children = (
 				738518E41D533D31004A359C /* LaunchScreen.storyboard */,
 				738518E61D533D31004A359C /* Main.storyboard */,
 			);
+			name = Storyboard/Xib;
 			path = "Storyboard : Xib";
 			sourceTree = "<group>";
 		};
@@ -112,6 +118,22 @@
 				738518EC1D533D49004A359C /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		738518F11D533F02004A359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				738518F21D533F02004A359C /* Home */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		738518F21D533F02004A359C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				738518F31D533F0F004A359C /* Home.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		73D5AE7E1D51C0600026911E = {
@@ -135,11 +157,12 @@
 		73D5AE891D51C0600026911E /* BaseiOS */ = {
 			isa = PBXGroup;
 			children = (
+				738518DA1D533CD6004A359C /* Business Layer */,
+				738518F11D533F02004A359C /* Model */,
 				738518EA1D533D49004A359C /* Resources */,
-				738518E31D533D31004A359C /* Storyboard : Xib */,
+				738518E31D533D31004A359C /* Storyboard/Xib */,
 				738518E01D533D15004A359C /* App Delegate */,
 				738518DC1D533CFC004A359C /* View Controller */,
-				738518DA1D533CD6004A359C /* Business Layer */,
 				73D5AE9F1D51C71A0026911E /* Utilities */,
 				73D5AE9C1D51C1090026911E /* WebServiceCall */,
 				73D5AEA41D51EEAF0026911E /* CoreDataModel.xcdatamodeld */,
@@ -301,6 +324,8 @@
 				73D5AEA31D51C71A0026911E /* Utility.swift in Sources */,
 				73D5AEA61D51EEAF0026911E /* CoreDataModel.xcdatamodeld in Sources */,
 				73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */,
+				738518F01D533DC9004A359C /* HomeBusinessLayer.swift in Sources */,
+				738518F41D533F0F004A359C /* Home.swift in Sources */,
 				73D5AEA21D51C71A0026911E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
