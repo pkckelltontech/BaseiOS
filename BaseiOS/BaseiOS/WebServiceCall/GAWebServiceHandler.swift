@@ -57,6 +57,7 @@ class GAWebServiceHandler: NSObject {
                 let responseDict = response as! NSDictionary
 //                print(responseDict)
                 let result_collection : NSMutableArray = responseDict.objectForKey("notifications") as! NSMutableArray
+                
                 //Array contains model object
                 let responseArray : NSMutableArray = HomeBusinessLayer.sharedInstance.parseJsonData(result_collection)
                 successBlock(result: responseArray)

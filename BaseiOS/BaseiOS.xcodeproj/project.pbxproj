@@ -15,6 +15,7 @@
 		738518EE1D533D49004A359C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 738518EC1D533D49004A359C /* Info.plist */; };
 		738518F01D533DC9004A359C /* HomeBusinessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */; };
 		738518F41D533F0F004A359C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518F31D533F0F004A359C /* Home.swift */; };
+		738518F61D534840004A359C /* BaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518F51D534840004A359C /* BaseClass.swift */; };
 		73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */; };
 		73D5AEA21D51C71A0026911E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA01D51C71A0026911E /* Constants.swift */; };
 		73D5AEA31D51C71A0026911E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA11D51C71A0026911E /* Utility.swift */; };
@@ -31,6 +32,7 @@
 		738518EC1D533D49004A359C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusinessLayer.swift; sourceTree = "<group>"; };
 		738518F31D533F0F004A359C /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		738518F51D534840004A359C /* BaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClass.swift; sourceTree = "<group>"; };
 		73D5AE871D51C0600026911E /* BaseiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAWebServiceHandler.swift; sourceTree = "<group>"; };
 		73D5AEA01D51C71A0026911E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		738518F21D533F02004A359C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				738518F51D534840004A359C /* BaseClass.swift */,
 				738518F31D533F0F004A359C /* Home.swift */,
 			);
 			path = Home;
@@ -326,6 +329,7 @@
 				73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */,
 				738518F01D533DC9004A359C /* HomeBusinessLayer.swift in Sources */,
 				738518F41D533F0F004A359C /* Home.swift in Sources */,
+				738518F61D534840004A359C /* BaseClass.swift in Sources */,
 				73D5AEA21D51C71A0026911E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
