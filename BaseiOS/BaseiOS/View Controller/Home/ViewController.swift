@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     //MARK: IBActions
     @IBAction func btnPostWebServiceAction(sender: UIButton) {
-        let param = ["email":"pardeep.chaudhary@kelltontech.com", "password":"pardc@12", "plateForm":"ios", "deviceToken":"abcdef123456"]
+        let param = ["email":"pardeep.chaudhary@kelltontech.com", "password":"hackme123", "plateForm":"ios", "deviceToken":"abcdef123456"]
         
 //        let parameters=["user":["username":userNameTextField?.text as! AnyObject,
 //            "password":passwordTextField?.text as! AnyObject]]
