@@ -16,6 +16,8 @@
 		738518F01D533DC9004A359C /* HomeBusinessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */; };
 		738518F41D533F0F004A359C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518F31D533F0F004A359C /* Home.swift */; };
 		738518F61D534840004A359C /* BaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738518F51D534840004A359C /* BaseClass.swift */; };
+		73A03CF31D54696D0055F101 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A03CF21D54696D0055F101 /* Notification.swift */; };
+		73A03CF61D5469950055F101 /* NotificationBusinessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A03CF51D5469950055F101 /* NotificationBusinessLayer.swift */; };
 		73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */; };
 		73D5AEA21D51C71A0026911E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA01D51C71A0026911E /* Constants.swift */; };
 		73D5AEA31D51C71A0026911E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5AEA11D51C71A0026911E /* Utility.swift */; };
@@ -33,6 +35,8 @@
 		738518EF1D533DC9004A359C /* HomeBusinessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBusinessLayer.swift; sourceTree = "<group>"; };
 		738518F31D533F0F004A359C /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		738518F51D534840004A359C /* BaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClass.swift; sourceTree = "<group>"; };
+		73A03CF21D54696D0055F101 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		73A03CF51D5469950055F101 /* NotificationBusinessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBusinessLayer.swift; sourceTree = "<group>"; };
 		73D5AE871D51C0600026911E /* BaseiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D5AE9D1D51C1090026911E /* GAWebServiceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAWebServiceHandler.swift; sourceTree = "<group>"; };
 		73D5AEA01D51C71A0026911E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		738518DA1D533CD6004A359C /* Business Layer */ = {
 			isa = PBXGroup;
 			children = (
+				73A03CF41D5469890055F101 /* Notification */,
 				738518DB1D533CD6004A359C /* Home */,
 			);
 			path = "Business Layer";
@@ -125,6 +130,7 @@
 		738518F11D533F02004A359C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				73A03CF11D54695C0055F101 /* Notification */,
 				738518F21D533F02004A359C /* Home */,
 			);
 			path = Model;
@@ -137,6 +143,22 @@
 				738518F31D533F0F004A359C /* Home.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		73A03CF11D54695C0055F101 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				73A03CF21D54696D0055F101 /* Notification.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		73A03CF41D5469890055F101 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				73A03CF51D5469950055F101 /* NotificationBusinessLayer.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		73D5AE7E1D51C0600026911E = {
@@ -326,8 +348,10 @@
 				738518DF1D533CFC004A359C /* ViewController.swift in Sources */,
 				73D5AEA31D51C71A0026911E /* Utility.swift in Sources */,
 				73D5AEA61D51EEAF0026911E /* CoreDataModel.xcdatamodeld in Sources */,
+				73A03CF61D5469950055F101 /* NotificationBusinessLayer.swift in Sources */,
 				73D5AE9E1D51C1090026911E /* GAWebServiceHandler.swift in Sources */,
 				738518F01D533DC9004A359C /* HomeBusinessLayer.swift in Sources */,
+				73A03CF31D54696D0055F101 /* Notification.swift in Sources */,
 				738518F41D533F0F004A359C /* Home.swift in Sources */,
 				738518F61D534840004A359C /* BaseClass.swift in Sources */,
 				73D5AEA21D51C71A0026911E /* Constants.swift in Sources */,

@@ -13,6 +13,9 @@ class Home: NSObject {
 
     func initWithDictionary(dictionary: NSMutableDictionary) -> (AnyObject) {
         
+//        self.uid = restDic["uid"]?.integerValue ?? 0
+//        self.uid_String = restDic["uid"] as? String ?? ""
+        
         if (dictionary.objectForKey("title") != nil)  {
             self.title = dictionary.objectForKey("title") as? String
         }

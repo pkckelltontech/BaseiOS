@@ -18,10 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-SM-o6C">
-                                <rect key="frame" x="78" y="234" width="165" height="30"/>
-                                <state key="normal" title="Call GET webservice"/>
+                                <rect key="frame" x="24" y="234" width="272" height="30"/>
+                                <state key="normal" title="Call GET (Dict) webservice"/>
                                 <connections>
                                     <action selector="btnGETWebServiceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ztz-FG-EUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ita-oA-wmh">
+                                <rect key="frame" x="24" y="316" width="272" height="30"/>
+                                <state key="normal" title="Call GET (Array of Dict) webservice"/>
+                                <connections>
+                                    <action selector="btnGET2WebServiceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNY-Ll-5dg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ1-sh-wP5">

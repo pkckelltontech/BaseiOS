@@ -7,4 +7,5 @@ target 'BaseiOS' do
 
   # Pods for BaseiOS
 	pod 'Alamofire'
+    #pod 'Firebase'
 end

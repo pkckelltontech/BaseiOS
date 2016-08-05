@@ -43,5 +43,15 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func btnGET2WebServiceAction(sender: UIButton) {
+        GAWebServiceHandler.sharedInstance.getAllNotifications({ (result) in
+            print("Success in all notification %@",result)
+            }) { (error) in
+                print("Error at all notification")
+        }
+    }
+    
+    
 }
 

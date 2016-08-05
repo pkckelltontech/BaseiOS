@@ -11,14 +11,14 @@ import UIKit
 
 
 // WEBSERVICE MACRO
-let BASE_URL = "https://www.hungermafia.com/hm/application/ws/"
-
-//TO GET ACCESS TOKEN
-let ACCESS_TOKEN_BASE_URL = BASE_URL+"oauth/token"
+//let BASE_URL = "https://www.hungermafia.com/hm/application/ws/"
+let BASE_URL = "http://jsonplaceholder.typicode.com/"
 
 
+//let GET_NOTIFICATION = BASE_URL+"notification/getUserNotifications";
+let GET_NOTIFICATION = BASE_URL+"posts/1"
+let GET_ALL_NOTIFICATION = BASE_URL+"posts"
 
-let GET_NOTIFICATION = BASE_URL+"notification/getUserNotifications";
 var API_LOGIN:String = BASE_URL+"login/index"
 
 

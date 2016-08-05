@@ -55,15 +55,35 @@ class GAWebServiceHandler: NSObject {
             if(finished)
             {
                 let responseDict = response as! NSDictionary
-//                print(responseDict)
-                let result_collection : NSMutableArray = responseDict.objectForKey("notifications") as! NSMutableArray
-                
-                //Array contains model object
-                let responseArray : NSMutableArray = HomeBusinessLayer.sharedInstance.parseJsonData(result_collection)
-                successBlock(result: responseArray)
+                print(responseDict)
+                let result_collection : NSMutableArray = NotificationBusinessLayer.sharedInstance.parseJsonData(responseDict)
+                successBlock(result: result_collection)                
             }
             else{
                 let error = response as! NSError
+                Utility.showAlertWithTitle("Error", message: error.debugDescription)
+                failureBlock(error: error)
+            }
+            
+            Utility.hideLoader()
+        }
+    }
+    
+    func getAllNotifications(successBlock: (result: NSMutableArray?) -> Void, failureBlock:(error: NSError)->Void)
+    {
+        Utility.showLoader()
+        
+        self.getApiRequest(.GET, url: GET_ALL_NOTIFICATION) { (finished, response) in
+            if(finished)
+            {
+                let responseArray = response as! NSArray
+//                print(responseArray)
+                let result_collection : NSMutableArray = NotificationBusinessLayer.sharedInstance.parseArrayJsonData(responseArray)
+                successBlock(result: result_collection)
+            }
+            else{
+                let error = response as! NSError
+                Utility.showAlertWithTitle("Error", message: error.debugDescription)
                 failureBlock(error: error)
             }
             
@@ -84,6 +104,7 @@ class GAWebServiceHandler: NSObject {
             }
             else{
                 let error = response as! NSError
+                Utility.showAlertWithTitle("Error", message: error.debugDescription)
                 failureBlock(error: error)
             }
             

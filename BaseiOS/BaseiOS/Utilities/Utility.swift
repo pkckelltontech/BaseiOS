@@ -73,13 +73,18 @@ class Utility: NSObject {
     }
     
     //MARK: - Alert View
-    func showAlertTitle(title: String?, message: String!)
+    static func showAlertWithTitle(title: String?, message: String!)
     {
-        let alert: UIAlertView = UIAlertView()
-        alert.title = title!
-        alert.message = message
-        alert.addButtonWithTitle("OK")
-        alert.show()
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
+        }))
+        
+        APP_DELEGATE.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+//        let alert: UIAlertView = UIAlertView()
+//        alert.title = title!
+//        alert.message = message
+//        alert.addButtonWithTitle("OK")
+//        alert.show()
     }
     
 }
